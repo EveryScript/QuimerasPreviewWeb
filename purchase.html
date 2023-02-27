@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- ** Basic Page Needs ** -->
+  <meta charset="utf-8">
+  <title>Quimeras Bolivia</title>
+  <!-- ** Mobile Specific Metas ** -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Cache-Control" content="no-store" />
+  <meta name="description" content="Sitio web Consultora Multidisciplinaria Quimeras Bolivia">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Ing. Ever Quispe Ticona">
+  <meta name="generator" content="Themefisher Promodise Template v1.0">
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/fontawesome/css/all.css">
+  <link rel="stylesheet" href="plugins/icofont/icofont.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="js/template/page.js"></script>
+  <script src="plugins/jquery-captcha/jquery-captcha.min.js"></script>
+  <script src="js/template/captcha.js"></script>
+  <script src="js/purchase.js"></script>
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+</head>
+
+<body data-spy="scroll" data-target="#mainNav">
+  <section class="section-padding d-block mt-2">
+    <div class="container">
+      <img src="./images/icon/shopping.png" width="100" class="d-block mx-auto mt-3" alt="">
+      <h2 class="mb-2 text-center"> Compra de certificados </h2>
+      <div class="row">
+        <div class="col-lg-5 mt-4">
+          <h5 class="mb-1">Certificados <span id="purchase-count"></span></h5>
+          <div id="purchase-courses"></div>
+          <h5 class="mt-4 mb-1" id="purchase-prices"> </h5>
+          <div class="card qbg-danger mt-3">
+            <div class="card-body  p-2">
+              <p class="card-text">
+                <span class="font-weight-bold"> IMPORTANTE: </span>
+                Enviaremos su(s) certificado(s) en PDF via <span class="font-weight-bold">Whatsapp</span>. El pedido
+                incluye 1 folder, certificados originales con <span class="font-weight-bold">CITE</span>, código <span
+                  class="font-weight-bold">QR</span> y sello seco imposible de falsificar. También incluye un <span
+                  class="font-weight-bold">DVD</span> con los cursos grabados y
+                material extra; todo con factura y el envío hasta la terminal de buses de su ciudad es totalmente
+                gratis.
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-lg-7 col-sm-12 pl-3 mt-4">
+          <h5>Siga las instrucciones para obtener los certificados</h5>
+          <p class="qtext-primary mt-1 mb-1">1. Realiza tu deposito de <span class="font-weight-bold">130 Bs.</span> a
+            cualquiera de las siguientes cuentas:</p>
+          <div class="card border-success">
+            <div class="card-body p-2">
+              <p class="mb-0"> <span class="font-weight-bold qtext-success">BANCO UNION:</span> 118009791</p>
+              <p class="mb-0"> <span class="font-weight-bold qtext-success">BANCO MERCANTIL SANTA CRUZ:</span>
+                4026057582</p>
+              <p class="mb-0"> <span class="font-weight-bold qtext-success">BANCO BCP:</span> 501-51363231-3-36</p>
+              <p class="mb-0"> <span class="font-weight-bold qtext-success">Tigo Money:</span> Cel. 73858162</p>
+              <span class="qtext-success">Todas las cuentas están a nombre de Ricardo Carlos Oropeza Zarate con cédula
+                de indentidad N
+                6600800 PT</span>
+            </div>
+          </div>
+          <form id="form-client" class="mt-3">
+            <input type="text" name="web_action" value="saveClient" hidden>
+            <input type="text" name="price" id="price-form" hidden>
+            <p class="qtext-primary mt-2 mb-1">2. Ingresa tu <span class="font-weight-bold">nombre completo</span> para
+              "llenar" certificado</p>
+            <div class="row">
+              <div class="col-md-6 form-group" id="profesion-custom-form">
+                <input name="profesion-prev-custom" type="text" class="form-control" placeholder="Abreviación de profesión"
+                  id="profesion-custom">
+              </div>
+              <div class="col-md-6 form-group border-secondary" id="profesion-select-form">
+                <select name="profesion-prev" class="form-control pl-3" aria-label="Default select example" id="profesion-select">
+                  <option value="">Abreviación de la profesión</option>
+                  <option value="op-none"> Solo mi nombre (Título profesional aún en trámite) </option>
+                  <option value="Lic."> Lic. (Titulado) </option>
+                  <option value="Ing."> Ing. (Titulado) </option>
+                  <option value="Dr."> Doctor (Titulado) </option>
+                  <option value="Dra."> Doctora (Titulada) </option>
+                  <option value="Abog."> Abog. </option>
+                  <option value="op-other"> Otro </option>
+                </select>
+              </div>
+              <div class="col-md-6 form-group">
+                <input name="first-name" type="text" class="form-control" placeholder="Nombre(s)" id="name" required>
+              </div>
+              <div class="col-md-6 form-group">
+                <input name="second-name" type="text" class="form-control" placeholder="Apellido paterno" id="second-name"
+                  required>
+              </div>
+              <div class="col-md-6 form-group">
+                <input name="last-name" type="text" class="form-control" placeholder="Apellido materno" id="last-name">
+              </div>
+
+              <div class="col-md-12 text-center mb-3">
+                <span class="d-block qtext-success" id="preview-title">Certificación a nombre de </span>
+                <p class="h2" id="label-certification">
+                  <span id="label-abrev"></span> <span id="label-first-name"></span> <span id="label-second-name"></span> <span id="label-last-name"></span>
+                </p>
+              </div>
+            </div>
+            <p class="qtext-primary mt-2 mb-1">
+              3. Ingresa tu <span class="font-weight-bold">profesión actual</span>,
+              tu numero de <span class="font-weight-bold">celular</span>,
+              el <span class="font-weight-bold">Banco</span> en el que hiciste tu deposito y
+              el <span class="font-weight-bold">departamento</span> al cual enviaremos tu(s) certificado(s).
+            </p>
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input name="profesion-desc" type="text" class="form-control" placeholder="Profesión actual" required>
+              </div>
+              <div class="col-md-6 form-group">
+                <input name="phone" type="number" class="form-control" placeholder="Celular" required>
+              </div>
+              <div class="col-md-6 form-group">
+                <input name="deposit" type="text" class="form-control" placeholder="Banco en el que se realizó el deposito"
+                  required>
+              </div>
+              <div class="col-md-6 form-group border-secondary">
+                <select name="location" class="form-control pl-3" aria-label="Default select example" id="location-form" required></select>
+              </div>
+            </div>
+            <p class="qtext-primary mt-2 mb-1">
+              4. Por ultimo sube una <span class="font-weight-bold">fotografia</span> o
+              <span class="font-weight-bold">captura de pantalla</span> de tu depósito para confirmar tu pedido.
+            </p>
+            <div class="row">
+              <input class="col-md-12" name="comprobant" type="file" accept="image/*" required>
+              <div class="col-md-12 text-muted mb-3 mt-3 copyright-form">
+                Todos los certificados se otorgan bajo registro en el Servicio Plurinacional de Registro de Comercio
+                – SEPREC, en concordancia con el D.S. 4596, también con registro en el Servicio de Impuestos
+                Nacionales de Bolivia con Número de Identificación Tributaria y Matricula de Comercio N° 6600800010,
+                con actividad principal 854000 - Enseñanza de adultos y otros tipos de enseñanza en concordancia con
+                las normas tributarias en vigencia y en cumplimiento a las normas establecidas en el Código de
+                Comercio.
+              </div>
+              <div class="col-5 p-0"> <canvas class="w-100" id="canvas"></canvas> </div>
+              <div class="col-7">
+                <input type="text" id="input-captcha" class="form-control mb-1" placeholder="Soy un humano">
+                <!-- <span class="qtext-success"> <i class="fa fa-check"></i> Verificación correcta</span> -->
+                <!-- <span class="qtext-danger"> <i class="fa fa-exclamation-circle"></i> Inténtalo de nuevo</span> -->
+                <span class="qtext-primary" id="verify-message"> Escribe el código</span>
+              </div>
+              <div class="col-md-12 d-flex flex-wrap mt-3">
+                <input type="submit" class="mb-1 btn btn-block qbg-primary p-2" value="Enviar solicitud a Quimeras Bolivia">
+                <input type="button" class="mb-1 btn btn-block qbg-success p-2" value="Prefiero registrarme por WhatsApp">
+              </div>
+            </div>
+          </form>
+          <a href="courses.html" class="d-block text-center mt-3 qtext-primary">Volver a la página de Capacitaciones</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--  CONTACT END  -->
+
+  <!--  Google Map START  -->
+
+
+  <footer id="footer" class="section-padding"></footer>
+  <script src="js/template/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- ** Basic Page Needs ** -->
+  <meta charset="utf-8">
+  <title>Quimeras Bolivia</title>
+  <!-- ** Mobile Specific Metas ** -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Cache-Control" content="no-store" />
+  <meta name="description" content="Sitio web Consultora Multidisciplinaria Quimeras Bolivia">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Ing. Ever Quispe Ticona">
+  <meta name="generator" content="Themefisher Promodise Template v1.0">
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/fontawesome/css/all.css">
+  <link rel="stylesheet" href="plugins/icofont/icofont.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="js/template/page.js"></script>
+  <script src="js/courses.js"></script>
+  <script src="js/shopping.js"></script>
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+</head>
+
+<body data-spy="scroll" data-target="#mainNav">
+  <!--MAIN HEADER AREA START -->
+  <nav class="navbar navbar-expand-lg fixed-top trans-navigation pt-2 pb-2" id="nav-bar"></nav>
+  <!--MAIN HEADER AREA END -->
+
+  <!--MAIN BANNER AREA START -->
+  <div class="page-banner-area page-contact" id="page-banner">
+    <div class="overlay dark-overlay"></div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
+          <div class="banner-content content-padding">
+            <h1 class="text-white">Capacitaciones gratuitas</h1>
+            <p>Tenemos las mejores capacitaciones para completar y mejorar tu curriculum a nivel profesional</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--MAIN HEADER AREA END -->
+
+  <!-- Shopping Bar -->
+  <div class="qbg-warning text-dark shopping-cart" id="shopping-cart-bar">
+    <img src="./images/icon/shopping.png" class="mr-1" width="40" alt="">
+    <h5 class="shopping-title" id="shopping-title">Cargando ...</h5>
+    <div class="d-inline" id="shopping-buttons"></div>
+  </div>
+
+  <!-- Modal Shopping Cart -->
+  <div class="modal fade" id="shopping-cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">
+            <img src="./images/icon/shopping.png" width="30" alt=""> Certificados añadidos
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-dark overflow-auto" id="shopping-cart-content"></div>
+        <div class="modal-footer" id="shopping-footer">
+          <h5 class="d-inline-block h4" id="shopping-price"></h5>
+          <button type="button" class="btn p-1 qbg-success" id="shopping-purchase"><i class="fa fa-check mr-1"></i>
+            Procesar pago</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Ad -->
+  <div class="modal fade" id="modal-ad-courses" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-dark text-center">
+          <video src="images/about/ad-quimeras.mp4" class="mr-4" width="280" autoplay loop></video>
+          <h4>¡Aprovecha los descuentos de hoy!</h4>
+          <p>Si adquieres cuatro o más cursos, te beneficias de nuestra promoción y cada uno te sale solo a
+            <span class="font-weight-bold">50 Bs.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRICE AREA START  -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="col-lg-12 col-sm-12 m-auto">
+        <h4 class="section-title text-center">Encuentra lo que necesitas para potenciar tu currículum</h4>
+        <div class="sidebar-widget search">
+          <div class="form-group text-right">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Buscar una capacitación gratuita" class="form-control"
+              id="input-search-course">
+          </div>
+        </div>
+      </div>
+      <div class="col-12 mt-5 text-center" id="search-control-block">
+        <div class="spinner-border mx-auto" role="status">
+          <span class="visually-hidden"></span>
+        </div>
+        <span class="d-block mt-2 mb-3 text-center" id="search-control-title">Cargando</span>
+      </div>
+      <div class="row" id="courses-content">
+      </div>
+    </div>
+  </section>
+  <!-- PRICE AREA END  -->
+
+  <!--  FOOTER AREA START  -->
+  <footer id="footer" class="section-padding"></footer>
+  <!--  FOOTER AREA END  -->
+
+  <!-- Bootstrap css -->
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <!-- main script -->
+  <script src="js/template/script.js"></script>
+
+</body>
+
+</html>
